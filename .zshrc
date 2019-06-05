@@ -143,6 +143,7 @@ alias .....='cd ../../../..'
 alias grep='grep --color=always'
 
 alias copy='rsync -ah --progress'
+alias mkcd='function _mkcd(){mkdir "$1"; cd "$1"}; _mkcd'
 
 
 #   -------------------------------------
@@ -208,12 +209,14 @@ alias kp='kubectl proxy'
 alias gs='git status'
 alias gcl='git clone'
 alias gch='git checkout'
+alias gcb='git checkout -b'
 alias gcm='git commit -m'
 alias gr='git rebase'
 alias gm='git merge'
+alias gma='git merge --abort'
 alias gb='git branch'
 alias ga='git add -A'
-alias gpl='git pull'
+alias gpl='git pull --rebase'
 alias gpu='git push'
 alias glg='git log --date-order --all --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
 alias glg2='git log --date-order --all --graph --name-status --format="%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
